@@ -21,14 +21,87 @@
         p {
             font-size: 1.2em;
         }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0078D7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        /* Overlay to block the memo links */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 1000;
+        }
+        .overlay-content {
+            text-align: center;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+        .overlay h2 {
+            margin: 0 0 15px 0;
+        }
+        .overlay p {
+            margin-bottom: 20px;
+        }
+        .close-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Company Memos</h1>
+        
+        
+    
+        <a href="#" class="button disabled" onclick="event.preventDefault();">Today's Memo!</a>
+        <br><br>
+        <a href="#" class="button disabled" onclick="event.preventDefault();">Yesterday's Memo!</a>
+        <div class="overlay" id="overlay">
+            <div class="overlay-content">
+                <h2>Access Blocked</h2>
+                <p>This part of the site is restricted. Contact your administrator for access.</p>
+                <button class="close-button" onclick="closeOverlay()">Close</button>
+            </div>
+        </div>
+        
+        <!--
+        
         <a href="memo1.html" class="button">Today's Memo!</a>
         <br><br>
-        <a href="Memo2.html" class="button">Yesterday's Memo!</a>
-    </div>
+        <br><br>
+        <a href="memo2.html" class="button">Yesterday's Memo!</a>
+    </div> -->
+
+    <script>
+        // Function to close the overlay
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
+
