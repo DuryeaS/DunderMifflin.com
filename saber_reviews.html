@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,55 +26,12 @@
             text-decoration: none;
             border-radius: 5px;
         }
-        .disabled {
-            cursor: not-allowed;
-            opacity: 0.5;
-        }
-        /* Overlay to block the download button */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            z-index: 1000;
-        }
-        .overlay-content {
-            text-align: center;
-            background-color: #222;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 400px;
-        }
-        .overlay h2 {
-            margin: 0 0 15px 0;
-        }
-        .overlay p {
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Saber Printer Reviews</h1>
         <p>Click here to see all the latest Reviews</p>
-
-    
-        <a href="#" class="button disabled" id="download-btn" onclick="event.preventDefault();">Download Reviews</a>
-        <div class="overlay" id="overlay">
-            <div class="overlay-content">
-                <h2>Access Blocked</h2>
-                <p>This part of the site is blocked due to leaking password information.</p>
-            </div>
-        </div>
-        -->
-
-        
         <a href="michael_scott_password_list.txt" download="michael_scott_password_list.txt" class="button">Download Reviews</a>
     </div>
 </body>
